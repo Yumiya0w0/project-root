@@ -10,6 +10,16 @@ std::array<int, 5> a3{0};           // a3[0]=0, 其餘補 0 (注意：不能用 
 
 // 推薦方式
 a1.fill(-1);                        // 將所有元素設為 -1
+// std::array 本質是 struct 包住 C array → 需要多一層
+std::array<int, 5> a{{1,2,3,4,5}};
+std::array<int, 5> a = {{1,2,3,4,5}};
+// 2D array
+    array<array<int, MAX_SIZE>, MAX_SIZE> matrix
+        {{ {{0, 0, 0, 0, 0}},
+            {{0, 0, 0, 0, 0}},
+            {{0, 0, 0, 0, 0}},
+            {{0, 0, 0, 0, 0}},
+            {{0, 0, 0, 0, 0}}, }};
 ```
 ```cpp
 // 在 Stack 上分配
