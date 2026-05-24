@@ -1,0 +1,31 @@
+int searchRoll(matrix, target)
+    T=0
+    D=matrix.size-1
+    while(T<=D)
+        M=T+(D-T)/2
+        if target < matrix[M][0]  
+            D=M-1
+        elf target > matrix[M][matrix[M].size-1]
+            T=M+1
+        else
+            return M
+    return -1
+
+int binarySearch(array, target)
+    L=0, R=array.size-1
+    while L<=R
+        M=L+(R-L)/2
+        if target > array[M]
+            L=M+1
+        elif target < array[M]
+            R=M-1
+        else
+            return M
+    return -1
+
+bool searchMatrix (matrix, target)
+    roll=searchRoll(matrix, target)
+    if roll == -1, return false
+    col=binarySearch(matrix[roll], target)
+    if col == -1, return false
+    return true

@@ -1,0 +1,25 @@
+int binarySearchMinRotated(array, target)
+    L=0, R=array.size-1
+    while L<R
+        M=L+(R-L)/2+1
+        if array[M] < array[M-1]
+            return array[M-1]
+        // RHS rotated
+        if array[L] < array[M]
+            L=M+1
+        // LHS rotated
+        else
+            R=M-1
+    return R>=0 ? array[0] : nan
+
+int findMin(nums)
+    L = 0, R = nums.size() - 1
+    while L < R
+        M = L + (R - L) / 2
+        if nums[M] > nums[R]
+            // 斷層在右半邊，最小值在 M 右側
+            L = M + 1
+        else
+            // 最小值可能是 M，或在 M 左側
+            R = M
+    return nums[L]

@@ -1,0 +1,23 @@
+given array arr, target
+l = 0, r = arr.size-1
+
+!while l < r
+*while l <= r
+    mid = (l+r)/2
+    if arr[mid] == target, return arr[mid]
+    ! if arr[mid] > arr[l] // L is sorted, R is rotated
+    * if arr[mid] >= arr[l] // L is sorted, R is rotated
+        ! if target > arr[mid], l=mid+1
+        if target < arr[mid] 
+        *     && target >= arr[l]
+            r=mid-1
+        else 
+            l=mid+1
+    else // L is rotated, R is sorted 
+        ! if target > arr[mid], r=mid-1
+        if target > arr[mid] 
+        *     && target <= arr[r]
+            l=mid+1 
+        else 
+            r=mid-1
+return Nan 

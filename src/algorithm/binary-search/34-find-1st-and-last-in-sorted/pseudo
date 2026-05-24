@@ -1,0 +1,31 @@
+Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+If target is not found in the array, return [-1, -1].
+
+You must write an algorithm with O(log n) runtime complexity.
+
+
+do bin-sort until L=M and R=M
+
+searchRange
+    L=getBound(nums, true)
+    R=getBound(nums, false)
+    return vector{L,R}
+
+
+getBound(vector nums, bool isLower)
+    L=0, R=size-1, idx=-1
+    while L<=R
+        !) M = L + (R - L) / 2
+        //) M = (L+R)/2
+        if arr[M] < target
+            L=M+1
+        elif arr[M] > target
+            R=M-1
+        ?)else
+            idx=M
+            if(isLower)
+                R=M-1
+            else
+                L=M+1
+    return idx

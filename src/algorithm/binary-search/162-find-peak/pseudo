@@ -1,0 +1,14 @@
+// slope theory
+
+int findPeak(array)
+    L=0, R=array.size-1
+    while L<R
+        M=L+(R-L)/2
+        ! going downward means there is peak in LHS
+        if array[M] > array[M+1]
+            R=M
+        ! just go to RHS as nums[n] = -∞, there must be a peak
+        else 
+            L=M+1
+    return L
+    
