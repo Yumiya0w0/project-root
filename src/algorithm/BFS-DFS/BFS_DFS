@@ -1,21 +1,26 @@
-? DFS: recursive
+// DFS: recursive (stack)
+#include <vector>
+#include <queue>
 
-DFS(array, row, col)
-    ? boundary check 
-    if row<0 || row>=array.size ||
-        col<0 || col>=array[0].size ||
-        array[row][col] == '0'
+using namespace std;
+void DFS (vector<vector<char>>array, int row, int col)
+{    
+    //? boundary check 
+    if (row<0 || row>=array.size() ||
+        col<0 || col>=array[0].size() ||
+        array[row][col] == '0')
+        return;
+    //* Mark as visited before enter
+    array[row][col] = '0';
+    DFS(array, row+1, col);
+    DFS(array, row-1, col);
+    DFS(array, row, col+1);
+    DFS(array, row, col-1);
+}
 
-        return
-    * Mark as visited before enter
-    array[row][col] = '0'
-    DFS(array, row+1, col)
-    DFS(array, row-1, col)
-    DFS(array, row, col+1)
-    DFS(array, row, col-1)
-
+// BFS: queue 
 void bfs(vector<vector<char>>& grid, int r, int c) {
-    int M = grid.size(), N = grid.size();
+    int M = grid.size(), N = grid[0].size();
     queue<pair<int, int>> q;
     q.push({r, c});
     grid[r][c] = '0'; // 入隊即標記
@@ -27,7 +32,7 @@ void bfs(vector<vector<char>>& grid, int r, int c) {
         q.pop();
 
         for (auto& d : dirs) {
-            int nr = curR + d, nc = curC + d[1];
+            int nr = curR + d[0], nc = curC + d[1];
             if (nr >= 0 && nr < M && nc >= 0 && nc < N && grid[nr][nc] == '1') {
                 grid[nr][nc] = '0';
                 q.push({nr, nc});
