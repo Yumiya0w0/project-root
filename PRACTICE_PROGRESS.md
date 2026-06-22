@@ -3,8 +3,17 @@
 ## Ongoing Practice Areas
 
 ### Latest updates
+## Heap / Priority Queue (2026-06-22)
+### Problems Solved
+| Problem                     | Difficulty | Status | TC        | SC   | Notes |
+|---|---|---|---|---|---|
+| LC 215 Kth Largest Element  | Medium     | ✅     | O(nlogk)  | O(k) | Clean |
+| LC 23 Merge K Sorted Lists  | Hard       | ✅     | O(nlogk)  | O(k) | Comparator syntax nudge |
+| LC 253 Meeting Rooms II     | Medium     | ✅     | O(nlogn)  | O(n) | Clean |
+| LC 295 Median from Stream   | Hard       | ✅     | O(nlogn)  | O(n) | Missing braces bug |
+| LC 239 Sliding Window Max   | Hard       | ✅     | O(n)      | O(k) | Monotonic deque, not heap |
 
-### Two Pointers / Sliding Window — completed (2026-06-21)
+## Two Pointers / Sliding Window — completed (2026-06-21)
 Patterns covered: Variable Window, Monotonic Window, Fixed Window, Opposite Ends, Same Direction
 
 #### Struggle Patterns to Watch
@@ -17,10 +26,7 @@ Patterns covered: Variable Window, Monotonic Window, Fixed Window, Opposite Ends
 - Fixed window slide mechanics
 - Bottleneck pointer movement reasoning (Container With Most Water)
 
----
-
-### PRACTICE_PROGRESS
-
+### Problems Solved
 | Problem | Difficulty | Status | TC | SC | Notes |
 |---|---|---|---|---|---|
 | Longest Substring Without Repeating Chars | Medium | ✅ | O(n) | O(1) | Clean last-seen array variant |
