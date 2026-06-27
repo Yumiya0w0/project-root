@@ -1,8 +1,32 @@
 # Practice Progress
 
-## Ongoing Practice Areas
+## Graph advanced (2026-06-25 ~ 06-26)
+1. Topological Sort (BFS / Kahn's algorithm)
+2. Topological Sort (DFS)
+3. Dijkstra (shortest path)
+4. Union Find
 
-### Latest updates
+### Problems Solved
+| Problem               | Difficulty | Status | TC              | SC    | Notes |
+|---|---|---|---|---|---|
+| LC 207 Course Schedule| Medium     | ✅     | O(V+E)          | O(V+E)| Clean, comment said DFS not BFS |
+| LC 743 Network Delay  | Medium     | ✅     | O((V+E)logV)    | O(V+E)| TC wrong initially |
+| LC 547 Num Provinces  | Medium     | ✅     | O(V²)           | O(V)  | Two solutions, DFS modifies input |
+
+## Backtrack (2026-06-24)
+1. Subsets       ✅
+2. Permutations  ✅
+3. Combinations  ✅
+4. Word Search   ✅
+
+### Problems Solved
+| Problem          | Difficulty | Status | TC           | SC   | Notes |
+|---|---|---|---|---|---|
+| LC 78 Subsets    | Medium     | ✅     | O(2^n × n)   | O(n) | Clean |
+| LC 46 Permutations| Medium   | ✅     | O(n! × n)    | O(n) | TC wrong initially |
+| LC 77 Combinations| Medium   | ✅     | O(C(n,k)×k)  | O(k) | TC wrong initially |
+| LC 79 Word Search| Medium     | ✅     | O(nm × 4^l)  | O(l) | Clean |
+
 ## Tree (2026-06-23)
 1. Tree traversal (inorder, preorder, postorder)
 2. BST operations (search, insert, validate)
