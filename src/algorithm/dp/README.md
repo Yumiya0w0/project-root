@@ -1,3 +1,6 @@
+## Weak point
+- knap inner / outer loop
+- 
 ### Pattern Tracker
 | Check | Problem | Difficulty | Status | TC | SC | Notes |
 |---|---|---|---|---|---|---|
